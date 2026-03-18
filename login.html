@@ -3,67 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Word tutor | StuDoe</title>
+  <title>Tutor worden | StuDoe</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <a href="index.html" class="logo">
-      <img src="studoe-logo.png" alt="StuDoe logo">
-    </a>
+  <div class="header-inner">
+
+    <div class="left-group">
+      <button class="back-button" onclick="goBack()">←</button>
+
+      <a href="index.html" class="logo">
+        <img src="studoe-logo.png" alt="StuDoe logo">
+      </a>
+    </div>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="tutors.html">Zoek tutor</a>
-      <a href="login.html">Word tutor</a>
+      <a href="index.html">Start</a>
+      <a href="tutors.html">Tutors zoeken</a>
+      <a href="login.html">Tutor worden</a>
       <a href="contact.html">Contact</a>
     </nav>
-  </header>
 
-  <section class="page-section">
-    <h1 class="page-title">Word tutor bij StuDoe</h1>
-    <p class="page-subtitle">
-      Meld je aan als student en help leerlingen met betaalbare bijles.
-    </p>
-  </section>
+  </div>
+</header>
+  <main>
+    <section class="page-header">
+      <div class="wrapper">
+        <h1 class="page-title">Tutor worden</h1>
+        <p class="page-subtitle">
+          Ben je student en wil je jouw kennis inzetten om leerlingen te begeleiden? Meld je hier aan.
+        </p>
+      </div>
+    </section>
 
-  <section class="form-container">
-    <div class="form-card">
-      <h2>Aanmelden</h2>
-      <p>Vul je gegevens in om je als tutor te registreren.</p>
+    <section class="content-block">
+      <div class="wrapper">
+        <div class="panel form-card">
+          <h2>Aanmelden als tutor</h2>
+          <p class="intro">
+            Vul je gegevens in en zet de eerste stap om deel uit te maken van het StuDoe-platform.
+          </p>
 
-      <form onsubmit="return tutorAanmelden()">
-        <div class="field">
-          <label for="naam">Naam</label>
-          <input id="naam" type="text" placeholder="Jouw naam" required>
+          <form onsubmit="return tutorAanmelden()">
+            <div class="field">
+              <label for="naam">Naam</label>
+              <input id="naam" type="text" placeholder="Jouw volledige naam" required>
+            </div>
+
+            <div class="field">
+              <label for="email">E-mailadres</label>
+              <input id="email" type="email" placeholder="jouwmail@example.com" required>
+            </div>
+
+            <div class="field">
+              <label for="vak">Vak</label>
+              <input id="vak" type="text" placeholder="Bijvoorbeeld wiskunde of Frans" required>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Aanmelding versturen</button>
+          </form>
         </div>
-
-        <div class="field">
-          <label for="email">E-mail</label>
-          <input id="email" type="email" placeholder="Jouw e-mailadres" required>
-        </div>
-
-        <div class="field">
-          <label for="vak">Vak</label>
-          <input id="vak" type="text" placeholder="Bijvoorbeeld wiskunde" required>
-        </div>
-
-        <button class="primary" type="submit">Account aanmaken</button>
-      </form>
-    </div>
-  </section>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2026 StuDoe — Jouw studiepartner</p>
+    <div class="footer-inner">
+      <p>© 2026 StuDoe — Jouw studiepartner</p>
+    </div>
   </footer>
 
   <script>
     function tutorAanmelden(){
-      alert("Je account werd aangemaakt.");
+      alert("Je aanmelding werd succesvol verzonden.");
       return false;
     }
   </script>
-
+<script>
+function goBack(){
+  window.history.back();
+}
+</script>
 </body>
 </html>

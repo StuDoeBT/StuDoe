@@ -3,60 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boek een sessie | StuDoe</title>
+  <title>Sessie boeken | StuDoe</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <a href="index.html" class="logo">
-      <img src="studoe-logo.png" alt="StuDoe logo">
-    </a>
+  <div class="header-inner">
+
+    <div class="left-group">
+      <button class="back-button" onclick="goBack()">←</button>
+
+      <a href="index.html" class="logo">
+        <img src="studoe-logo.png" alt="StuDoe logo">
+      </a>
+    </div>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="tutors.html">Zoek tutor</a>
-      <a href="login.html">Word tutor</a>
+      <a href="index.html">Start</a>
+      <a href="tutors.html">Tutors zoeken</a>
+      <a href="login.html">Tutor worden</a>
       <a href="contact.html">Contact</a>
     </nav>
-  </header>
 
-  <section class="page-section">
-    <h1 class="page-title">Boek je sessie</h1>
-    <p class="page-subtitle">Kies een datum en tijd voor je bijles.</p>
-  </section>
+  </div>
+</header>
 
-  <section class="form-container">
-    <div class="form-card">
-      <h2>Boekingsformulier</h2>
-      <p>Plan snel en eenvoudig je eerste sessie.</p>
+  <main>
+    <section class="page-header">
+      <div class="wrapper">
+        <h1 class="page-title">Sessie boeken</h1>
+        <p class="page-subtitle">
+          Kies eenvoudig een datum en tijdstip voor jouw bijlesmoment.
+        </p>
+      </div>
+    </section>
 
-      <form onsubmit="return boekingBevestigen()">
-        <div class="field">
-          <label for="datum">Datum</label>
-          <input id="datum" type="date" required>
+    <section class="content-block">
+      <div class="wrapper">
+        <div class="panel form-card">
+          <h2>Boekingsformulier</h2>
+          <p class="intro">Plan hier je eerste sessie met de tutor van jouw keuze.</p>
+
+          <form onsubmit="return boekingBevestigen()">
+            <div class="field">
+              <label for="datum">Datum</label>
+              <input id="datum" type="date" required>
+            </div>
+
+            <div class="field">
+              <label for="tijd">Tijdstip</label>
+              <input id="tijd" type="time" required>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Boeking bevestigen</button>
+          </form>
         </div>
-
-        <div class="field">
-          <label for="tijd">Tijd</label>
-          <input id="tijd" type="time" required>
-        </div>
-
-        <button class="primary" type="submit">Bevestig boeking</button>
-      </form>
-    </div>
-  </section>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2026 StuDoe — Jouw studiepartner</p>
+    <div class="footer-inner">
+      <p>© 2026 StuDoe — Jouw studiepartner</p>
+    </div>
   </footer>
 
   <script>
     function boekingBevestigen(){
-      alert("Boeking bevestigd.");
+      alert("Je boeking is bevestigd.");
       return false;
     }
   </script>
-
+<script>
+function goBack(){
+  window.history.back();
+}
+</script>
 </body>
 </html>

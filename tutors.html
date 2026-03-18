@@ -3,57 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zoek tutor | StuDoe</title>
+  <title>Tutors zoeken | StuDoe</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <a href="index.html" class="logo">
-      <img src="studoe-logo.png" alt="StuDoe logo">
-    </a>
+  <div class="header-inner">
+
+    <div class="left-group">
+      <button class="back-button" onclick="goBack()" aria-label="Ga terug">
+        ←
+      </button>
+
+      <a href="index.html" class="logo">
+        <img src="studoe-logo.png" alt="StuDoe logo">
+      </a>
+    </div>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="tutors.html">Zoek tutor</a>
-      <a href="login.html">Word tutor</a>
+      <a href="index.html">Start</a>
+      <a href="tutors.html">Tutors zoeken</a>
+      <a href="login.html">Tutor worden</a>
       <a href="contact.html">Contact</a>
     </nav>
-  </header>
 
-  <section class="page-section">
-    <h1 class="page-title">Bekijk onze tutors</h1>
-    <p class="page-subtitle">
-      Kies een tutor op basis van vak, ervaring en rating.
-    </p>
-  </section>
+  </div>
+</header>
 
-  <section class="tutor-grid">
-    <div class="tutor-card">
-      <h3>Emma Peeters</h3>
-      <p>Vak: Wiskunde</p>
-      <p>Rating: 4.8/5</p>
-      <a href="tutor.html" class="btn primary">Bekijk tutor</a>
-    </div>
-
-    <div class="tutor-card">
-      <h3>Lucas Vermeulen</h3>
-      <p>Vak: Frans</p>
-      <p>Rating: 4.7/5</p>
-      <a href="tutor.html" class="btn primary">Bekijk tutor</a>
-    </div>
-
-    <div class="tutor-card">
-      <h3>Milan Janssens</h3>
-      <p>Vak: Economie</p>
-      <p>Rating: 4.9/5</p>
-      <a href="tutor.html" class="btn primary">Bekijk tutor</a>
+  <main>
+  <section class="page-header">
+    <div class="wrapper">
+      <h1 class="page-title">Tutors zoeken</h1>
+      <p class="page-subtitle">
+        Ontdek student-tutors per vak en kies de begeleiding die het best past bij jouw leerdoelen.
+      </p>
     </div>
   </section>
 
+  <section>
+    <div class="wrapper tutor-grid">
+
+      <div class="tutor-card">
+        <h3>Emma Peeters</h3>
+        <p><strong>Vak:</strong> Wiskunde</p>
+        <p><strong>Opleiding:</strong> Burgerlijk ingenieur</p>
+        <p><strong>Score:</strong> 4,8 / 5</p>
+        <a href="tutor.html?naam=Emma%20Peeters&vak=Wiskunde&opleiding=Burgerlijk%20ingenieur&score=4,8%20/%205&ervaring=2%20jaar%20ervaring%20in%20individuele%20bijles&beschrijving=Emma%20begeleidt%20leerlingen%20op%20een%20rustige%20en%20gestructureerde%20manier.%20Ze%20focust%20op%20inzicht,%20duidelijke%20uitleg%20en%20gerichte%20oefening." class="btn btn-primary">Bekijk profiel</a>
+      </div>
+
+      <div class="tutor-card">
+        <h3>Lucas Vermeulen</h3>
+        <p><strong>Vak:</strong> Frans</p>
+        <p><strong>Opleiding:</strong> Taal- en letterkunde</p>
+        <p><strong>Score:</strong> 4,7 / 5</p>
+        <a href="tutor.html?naam=Lucas%20Vermeulen&vak=Frans&opleiding=Taal-%20en%20letterkunde&score=4,7%20/%205&ervaring=1,5%20jaar%20ervaring%20in%20taalbegeleiding&beschrijving=Lucas%20helpt%20leerlingen%20vooral%20met%20spreekvaardigheid,%20grammatica%20en%20woordenschat.%20Hij%20werkt%20op%20een%20motiverende%20en%20praktische%20manier." class="btn btn-primary">Bekijk profiel</a>
+      </div>
+
+      <div class="tutor-card">
+        <h3>Sara Jacobs</h3>
+        <p><strong>Vak:</strong> Chemie</p>
+        <p><strong>Opleiding:</strong> Biomedische wetenschappen</p>
+        <p><strong>Score:</strong> 4,9 / 5</p>
+        <a href="tutor.html?naam=Sara%20Jacobs&vak=Chemie&opleiding=Biomedische%20wetenschappen&score=4,9%20/%205&ervaring=3%20jaar%20ervaring%20in%20wetenschapsvakken&beschrijving=Sara%20legt%20moeilijke%20leerstof%20helder%20uit%20en%20combineert%20theorie%20met%20gerichte%20oefeningen.%20Ze%20heeft%20een%20sterke%20focus%20op%20begrip%20en%20structuur." class="btn btn-primary">Bekijk profiel</a>
+      </div>
+
+    </div>
+  </section>
+</main>
   <footer>
-    <p>© 2026 StuDoe — Jouw studiepartner</p>
+    <div class="footer-inner">
+      <p>© 2026 StuDoe — Jouw studiepartner</p>
+    </div>
   </footer>
-
+<script>
+function goBack(){
+  window.history.back();
+}
+</script>
 </body>
 </html>
