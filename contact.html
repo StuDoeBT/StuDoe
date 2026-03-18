@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | StuDoe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <img src="studoe-logo.png" alt="StuDoe logo">
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tutors.html">Zoek tutor</a>
+      <a href="login.html">Word tutor</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="page-section">
+    <h1 class="page-title">Contact</h1>
+    <p class="page-subtitle">
+      Heb je vragen over StuDoe, bijlessen of het tutorplatform? Stuur ons een bericht.
+    </p>
+  </section>
+
+  <section class="form-container">
+    <div class="form-card">
+      <h2>Neem contact op</h2>
+      <p>Wij antwoorden zo snel mogelijk.</p>
+
+      <form onsubmit="return berichtVersturen()">
+        <div class="field">
+          <label for="contactNaam">Naam</label>
+          <input id="contactNaam" type="text" placeholder="Jouw naam" required>
+        </div>
+
+        <div class="field">
+          <label for="contactEmail">E-mail</label>
+          <input id="contactEmail" type="email" placeholder="Jouw e-mailadres" required>
+        </div>
+
+        <div class="field">
+          <label for="bericht">Bericht</label>
+          <textarea id="bericht" placeholder="Typ hier je bericht" required></textarea>
+        </div>
+
+        <button class="primary" type="submit">Verstuur bericht</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 StuDoe — Jouw studiepartner</p>
+  </footer>
+
+  <script>
+    function berichtVersturen(){
+      alert("Je bericht werd verzonden.");
+      return false;
+    }
+  </script>
+
+</body>
+</html>

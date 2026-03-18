@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word tutor | StuDoe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <img src="studoe-logo.png" alt="StuDoe logo">
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tutors.html">Zoek tutor</a>
+      <a href="login.html">Word tutor</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="page-section">
+    <h1 class="page-title">Word tutor bij StuDoe</h1>
+    <p class="page-subtitle">
+      Meld je aan als student en help leerlingen met betaalbare bijles.
+    </p>
+  </section>
+
+  <section class="form-container">
+    <div class="form-card">
+      <h2>Aanmelden</h2>
+      <p>Vul je gegevens in om je als tutor te registreren.</p>
+
+      <form onsubmit="return tutorAanmelden()">
+        <div class="field">
+          <label for="naam">Naam</label>
+          <input id="naam" type="text" placeholder="Jouw naam" required>
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" placeholder="Jouw e-mailadres" required>
+        </div>
+
+        <div class="field">
+          <label for="vak">Vak</label>
+          <input id="vak" type="text" placeholder="Bijvoorbeeld wiskunde" required>
+        </div>
+
+        <button class="primary" type="submit">Account aanmaken</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 StuDoe — Jouw studiepartner</p>
+  </footer>
+
+  <script>
+    function tutorAanmelden(){
+      alert("Je account werd aangemaakt.");
+      return false;
+    }
+  </script>
+
+</body>
+</html>
